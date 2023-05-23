@@ -1,0 +1,37 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using HeroRandomizer.Models;
+
+[ApiController]
+[Route("[controller]")]
+public class GameController : ControllerBase
+{
+    [HttpGet]
+    public IActionResult GetRandomHero(string gameName, string roleName)
+    {
+        var game = GameData.Games.FirstOrDefault(g => g.Name == gameName);
+        if (game == null)
+        {
+            return NotFound($"Game '{gameName}' not found.");
+        }
+
+        var role = game.Roles.FirstOrDefault(r => r.Name == roleName);
+        if (role == null)
+        {
+            return NotFound($"Role '{roleName}' not found in game '{gameName}'.");
+        }
+
+        if (role.Heroes.Count == 0)
+        {
+            return NotFound($"No heroes found for role '{roleName}' in game '{gameName}'.");
+        }
+
+        var random = new Random();
+        var randomHeroIndex = random.Next(role.Heroes.Count);
+        var randomHero = role.Heroes[randomHeroIndex];
+
+        return Ok(randomHero);
+    }
+}
