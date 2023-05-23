@@ -21,4 +21,4 @@ COPY --from=build /app/publish .
 
 EXPOSE 80
 
-ENTRYPOINT ["dotnet", "server/bin/Debug/net7.0/HeroRandomizer.dll"]
+ENTRYPOINT ["dotnet", "server/HeroRandomizer.csproj"]
