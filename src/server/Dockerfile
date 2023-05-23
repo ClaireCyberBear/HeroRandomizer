@@ -13,7 +13,7 @@ RUN dotnet build -c Release --no-restore
 
 RUN dotnet publish -c Release --no-restore -o /app/publish
 
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS final
+FROM mcr.microsoft.com/dotnet/aspnet:7.0-sdk AS final
 
 WORKDIR /app
 
