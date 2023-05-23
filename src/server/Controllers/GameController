@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using HeroRandomizer.Models;
 
+namespace HeroRandomizer.Controllers
+{
+
 [ApiController]
-[Route("[controller]")]
+[Route("game")]
 public class GameController : ControllerBase
 {
-    [HttpGet]
+    [HttpGet("GetRandomHero")]
     public IActionResult GetRandomHero(string gameName, string roleName)
     {
         var game = GameData.Games.FirstOrDefault(g => g.Name == gameName);
@@ -34,4 +37,5 @@ public class GameController : ControllerBase
 
         return Ok(randomHero);
     }
+}
 }
