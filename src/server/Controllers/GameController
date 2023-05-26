@@ -1,46 +1,24 @@
-using System;
-using System.Linq;
-using System.Collections.Generic;
+using HeroRandomizer.Data;
 using Microsoft.AspNetCore.Mvc;
-using HeroRandomizer.Models;
+using HeroRandomizer.Entities;
 
 namespace HeroRandomizer.Controllers
 {
 
 [ApiController]
-[Route("game")]
+[Route("server/[controller]")]
 public class GameController : ControllerBase
 {
-    [HttpGet("GetRandomHero")]
-    public IActionResult GetRandomHero(string gameName, string roleName)
+    private readonly DataContext _context;
+
+    public GameController(DataContext context)
     {
-        var game = GameData.Games.FirstOrDefault(g => g.Name == gameName);
-        if (game == null)
-        {
-            return NotFound($"Game '{gameName}' not found.");
-        }
-
-        var role = game.Roles.FirstOrDefault(r => r.Name == roleName);
-        if (role == null)
-        {
-            return NotFound($"Role '{roleName}' not found in game '{gameName}'.");
-        }
-
-        if (role.Heroes.Count == 0)
-        {
-            return NotFound($"No heroes found for role '{roleName}' in game '{gameName}'.");
-        }
-
-        var random = new Random();
-        var randomHeroIndex = random.Next(role.Heroes.Count);
-        var randomHero = role.Heroes[randomHeroIndex];
-
-        return Ok(randomHero);
+        _context = context;
     }
-    [HttpGet("test")]
-public IActionResult Test()
-{
-    return Ok("Test successful");
-}
+    [HttpGet]
+    public ActionResult<IEnumerable<Hero>> GetHeroes()
+    {
+        return _context.Heroes;
+    }
 }
 }
