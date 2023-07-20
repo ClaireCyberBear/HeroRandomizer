@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Select Role</h1>
+  <form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="role">Role</label>
+      <select class="form-control" id="role" formControlName="role">
+        <option>Tank</option>
+        <option>Damage</option>
+        <option>Support</option>
+      </select>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="ultimate"
+        formControlName="ultimate"
+      />
+      <label class="form-check-label" for="ultimate"> Exclude Ultimate </label>
+    </div>
+    <button class="btn btn-primary">Generate</button>
+  </form>
+  <div *ngIf="selectedHero">
+    <h2>Generated Hero: {{ selectedHero.name }}</h2>
+    <p>Role: {{ selectedHero.role }}</p>
+    <p>Ultimate: {{ selectedHero.ultimate }}</p>
+    <p>Ability One: {{ selectedHero.abilityOne }}</p>
+    <p>Ability Two: {{ selectedHero.abilityTwo }}</p>
+    <p>Secondary Fire: {{ selectedHero.secondaryFire }}</p>
+  </div>
+</div>
