@@ -1,27 +1,18 @@
 # HeroRandom
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+A webapp to generate a random Overwatch hero for a randomizer challenge; with the extra twist that it also returns one ability you cannot use. Database updated up to LifeWeaver. Built with Angular, Express, Bootstrap and SQLite
 
-## Development server
+## How to use
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Use the server. You can try and use it yourself locally though. Just run both express (node index.js) and angular (ng serve). Just make sure ports match
 
-## Code scaffolding
+## Planned
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Styling
+Display photo of character and ability
+Option to do all roles
+Option to generate for Apex Legends instead
 
-## Build
+## Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Angular, Express, Bootstrap, SQLite, Node.js, Typescript, lo-fi music and Googling a lot of embarassing errors
