@@ -47,6 +47,25 @@ app.post(`/api/heroes`, (req, res) => {
   );
 });
 
+app.get("/api/random-hero", (req, res) => {
+  const role = req.query.role;
+  const excludeUltimate = req.query.excludeUltimate === "true";
+
+  db.all(`SELECT * FROM heroes WHERE role = ?`, [role], (err, heroes) => {
+    if (err) {
+      res.status(500).json({ error: err.message });
+      return;
+    }
+    const randomHero = heroes[Math.floor(Math.random() * heroes.length)];
+
+    if (excludeUltimate) {
+      randomHero.ultimate = "Disabled";
+    }
+
+    res.json(randomHero);
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server is listening at http://localhost:${port}`);
 });

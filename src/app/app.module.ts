@@ -7,6 +7,7 @@ import { RandomizerComponent } from './randomizer/randomizer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroSelectComponent } from './hero-select/hero-select.component';
 import { HeroComponent } from './hero/hero.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: 'hero-select', component: HeroSelectComponent },
@@ -22,7 +23,7 @@ const routes: Routes = [
     HeroSelectComponent,
     HeroComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
