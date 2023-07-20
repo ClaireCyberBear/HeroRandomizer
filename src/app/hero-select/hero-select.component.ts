@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-hero-select',
@@ -7,17 +8,29 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   styleUrls: ['./hero-select.component.css'],
 })
 export class HeroSelectComponent implements OnInit {
-  heroForm: FormGroup = new FormGroup({});
+  heroForm: FormGroup;
+  selectedHero: any = null;
 
-  constructor(private fb: FormBuilder) {}
-
-  ngOnInit() {
-    this.heroForm = this.fb.group({
-      role: [''],
+  constructor(
+    private formBuilder: FormBuilder,
+    private heroService: HeroService
+  ) {
+    this.heroForm = this.formBuilder.group({
+      role: ['Tank', Validators.required],
       ultimate: [false],
     });
   }
-  onSubmit() {
-    console.log(this.heroForm.value);
+
+  ngOnInit(): void {}
+
+  onSubmit(): void {
+    const role = this.heroForm.value.role;
+    const excludeUltimate = this.heroForm.value.ultimate;
+
+    this.heroService
+      .getRandomHero(role, excludeUltimate)
+      .subscribe((data: any) => {
+        this.selectedHero = data;
+      });
   }
 }

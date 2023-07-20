@@ -35,7 +35,7 @@ db.run(
       {
         id: "1",
         name: "Reinhardt",
-        role: "tank",
+        role: "Tank",
         ultimate: "Earthshatter",
         abilityOne: "Charge",
         abilityTwo: "Fire Strike",
@@ -44,7 +44,7 @@ db.run(
       {
         id: "2",
         name: "D.VA",
-        role: "tank",
+        role: "Tank",
         ultimate: "Self-Destruct",
         abilityOne: "Boosters",
         abilityTwo: "Micro Missiles",
@@ -53,7 +53,7 @@ db.run(
       {
         id: "3",
         name: "Doomfist",
-        role: "tank",
+        role: "Tank",
         ultimate: "Meteor Strike",
         abilityOne: "Seismic Slam",
         abilityTwo: "Power Block",
@@ -62,7 +62,7 @@ db.run(
       {
         id: "4",
         name: "Junker Queen",
-        role: "tank",
+        role: "Tank",
         ultimate: "Rampage",
         abilityOne: "Commanding Shout",
         abilityTwo: "Carnage",
@@ -71,7 +71,7 @@ db.run(
       {
         id: "5",
         name: "Orisa",
-        role: "tank",
+        role: "Tank",
         ultimate: "Terra Surge",
         abilityOne: "Fortify",
         abilityTwo: "Javelin Throw",
@@ -80,7 +80,7 @@ db.run(
       {
         id: "6",
         name: "Ramattra",
-        role: "tank",
+        role: "Tank",
         ultimate: "Annihilation",
         abilityOne: "Nemesis Form",
         abilityTwo: "Ravenous Vortex",
@@ -89,7 +89,7 @@ db.run(
       {
         id: "7",
         name: "Roadhog",
-        role: "tank",
+        role: "Tank",
         ultimate: "Whole Hog",
         abilityOne: "Chain Hook",
         abilityTwo: "Take a Breather",
@@ -98,7 +98,7 @@ db.run(
       {
         id: "8",
         name: "Sigma",
-        role: "tank",
+        role: "Tank",
         ultimate: "Gravitic Flux",
         abilityOne: "Kinetic Grasp",
         abilityTwo: "Accretion",
@@ -107,7 +107,7 @@ db.run(
       {
         id: "9",
         name: "Winston",
-        role: "tank",
+        role: "Tank",
         ultimate: "Primal Rage",
         abilityOne: "Jump Pack",
         abilityTwo: "Barrier Projector",
@@ -116,7 +116,7 @@ db.run(
       {
         id: "10",
         name: "Wrecking Ball",
-        role: "tank",
+        role: "Tank",
         ultimate: "Mine Field",
         abilityOne: "Piledriver",
         abilityTwo: "Adaptive Shield",
@@ -125,7 +125,7 @@ db.run(
       {
         id: "11",
         name: "Zarya",
-        role: "tank",
+        role: "Tank",
         ultimate: "Graviton Surge",
         abilityOne: "Self Bubble",
         abilityTwo: "Team Bubble",
@@ -134,7 +134,7 @@ db.run(
       {
         id: "12",
         name: "Ashe",
-        role: "damage",
+        role: "Damage",
         ultimate: "B.O.B.",
         abilityOne: "Coach Gun",
         abilityTwo: "Dynanite",
@@ -143,7 +143,7 @@ db.run(
       {
         id: "13",
         name: "Bastion",
-        role: "damage",
+        role: "Damage",
         ultimate: "Artillery",
         abilityOne: "Assault",
         abilityTwo: "A-36 Tactical Grenade",
@@ -152,7 +152,7 @@ db.run(
       {
         id: "14",
         name: "Cassidy",
-        role: "damage",
+        role: "Damage",
         ultimate: "Dead-Eye",
         abilityOne: "Combat Roll",
         abilityTwo: "Magnetic Grenade",
@@ -161,7 +161,7 @@ db.run(
       {
         id: "15",
         name: "Echo",
-        role: "damage",
+        role: "Damage",
         ultimate: "Duplicate",
         abilityOne: "Flight",
         abilityTwo: "Sticky Bombs",
@@ -170,7 +170,7 @@ db.run(
       {
         id: "16",
         name: "Genji",
-        role: "damage",
+        role: "Damage",
         ultimate: "Dragonblade",
         abilityOne: "Swift Strike",
         abilityTwo: "Deflect",
@@ -179,7 +179,7 @@ db.run(
       {
         id: "17",
         name: "Hanzo",
-        role: "damage",
+        role: "Damage",
         ultimate: "Dragonstrike",
         abilityOne: "Storm Arrows",
         abilityTwo: "Sonic Arrow",
@@ -188,7 +188,7 @@ db.run(
       {
         id: "18",
         name: "Junkrat",
-        role: "damage",
+        role: "Damage",
         ultimate: "Rip-Tire",
         abilityOne: "Concussion Mine",
         abilityTwo: "Steel Trap",
@@ -197,7 +197,7 @@ db.run(
       {
         id: "19",
         name: "Mei",
-        role: "damage",
+        role: "Damage",
         ultimate: "Blizzard",
         abilityOne: "Cryo-Freeze",
         abilityTwo: "Ice Wall",
@@ -206,7 +206,7 @@ db.run(
       {
         id: "20",
         name: "Pharah",
-        role: "damage",
+        role: "Damage",
         ultimate: "Barrage",
         abilityOne: "Jump Jet",
         abilityTwo: "Concusssive Blast",
@@ -215,7 +215,7 @@ db.run(
       {
         id: "21",
         name: "Reaper",
-        role: "damage",
+        role: "Damage",
         ultimate: "Death Blossom",
         abilityOne: "Wraith Form",
         abilityTwo: "Shadow Step",
@@ -224,7 +224,7 @@ db.run(
       {
         id: "22",
         name: "Soujorn",
-        role: "damage",
+        role: "Damage",
         ultimate: "Railgun",
         abilityOne: "Power Slide",
         abilityTwo: "Disruptor Shot",
@@ -233,7 +233,7 @@ db.run(
       {
         id: "23",
         name: "Soldier 76",
-        role: "damage",
+        role: "Damage",
         ultimate: "Tactical Visor",
         abilityOne: "Sprint",
         abilityTwo: "Biotic Field",
@@ -242,7 +242,7 @@ db.run(
       {
         id: "24",
         name: "Sombra",
-        role: "damage",
+        role: "Damage",
         ultimate: "EMP",
         abilityOne: "Stealth",
         abilityTwo: "Translocator",
@@ -251,7 +251,7 @@ db.run(
       {
         id: "25",
         name: "Symmetra",
-        role: "damage",
+        role: "Damage",
         ultimate: "Photon Barrier",
         abilityOne: "Sentry Turret",
         abilityTwo: "Teleporter",
@@ -260,7 +260,7 @@ db.run(
       {
         id: "26",
         name: "Torbjorn",
-        role: "damage",
+        role: "Damage",
         ultimate: "Molten Core",
         abilityOne: "Deploy Turret",
         abilityTwo: "Overload",
@@ -269,7 +269,7 @@ db.run(
       {
         id: "27",
         name: "Tracer",
-        role: "damage",
+        role: "Damage",
         ultimate: "Pulse Bomb",
         abilityOne: "Blink",
         abilityTwo: "Recall",
@@ -278,7 +278,7 @@ db.run(
       {
         id: "28",
         name: "Widowmaker",
-        role: "damage",
+        role: "Damage",
         ultimate: "Wallhack",
         abilityOne: "Grapple Hook",
         abilityTwo: "Venom Mine",
@@ -287,7 +287,7 @@ db.run(
       {
         id: "29",
         name: "Ana",
-        role: "support",
+        role: "Support",
         ultimate: "Nano Boost",
         abilityOne: "Sleep Dart",
         abilityTwo: "Biotic Grenade",
@@ -296,7 +296,7 @@ db.run(
       {
         id: "30",
         name: "Batiste",
-        role: "support",
+        role: "Support",
         ultimate: "Amplification Matrix",
         abilityOne: "Regenerative Burst",
         abilityTwo: "Immortality Field",
@@ -305,7 +305,7 @@ db.run(
       {
         id: "31",
         name: "Brigitte",
-        role: "support",
+        role: "Support",
         ultimate: "Rally",
         abilityOne: "Whip Shot",
         abilityTwo: "Repair Pack",
@@ -314,7 +314,7 @@ db.run(
       {
         id: "32",
         name: "Kiriko",
-        role: "support",
+        role: "Support",
         ultimate: "Kitsune Rush",
         abilityOne: "Swift Step",
         abilityTwo: "Protection Suzu",
@@ -323,7 +323,7 @@ db.run(
       {
         id: "33",
         name: "Lifeweaver",
-        role: "support",
+        role: "Support",
         ultimate: "Tree of Life",
         abilityOne: "Petal Platform",
         abilityTwo: "Life Grip",
@@ -332,7 +332,7 @@ db.run(
       {
         id: "34",
         name: "Lucio",
-        role: "support",
+        role: "Support",
         ultimate: "Sound Barrier",
         abilityOne: "Crossfade",
         abilityTwo: "Soundwave",
@@ -341,7 +341,7 @@ db.run(
       {
         id: "35",
         name: "Mercy",
-        role: "support",
+        role: "Support",
         ultimate: "Valkyrie",
         abilityOne: "Guardian Angel",
         abilityTwo: "Resurrect",
@@ -350,7 +350,7 @@ db.run(
       {
         id: "36",
         name: "Moira",
-        role: "support",
+        role: "Support",
         ultimate: "Coalescence",
         abilityOne: "Fade",
         abilityTwo: "Biotic Orb",
@@ -359,7 +359,7 @@ db.run(
       {
         id: "37",
         name: "Zenyatta",
-        role: "support",
+        role: "Support",
         ultimate: "Transcendence",
         abilityOne: "Orb of Harmony",
         abilityTwo: "Orb of Discord",
