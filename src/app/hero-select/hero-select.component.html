@@ -64,10 +64,35 @@
       <div *ngIf="selectedHero">
         <h2>Generated Hero: {{ selectedHero.name }}</h2>
         <p>Role: {{ selectedHero.role }}</p>
-        <p>Ultimate: {{ selectedHero.ultimate }}</p>
-        <p>Ability One: {{ selectedHero.abilityOne }}</p>
-        <p>Ability Two: {{ selectedHero.abilityTwo }}</p>
-        <p>Secondary Fire: {{ selectedHero.secondaryFire }}</p>
+        <p>
+          Ultimate: {{ selectedHero.ultimate }}
+          <span
+            *ngIf="
+              !excludeUltimate &&
+              selectedHero.ultimate == selectedHero.disabledAbility
+            "
+            >(Disabled)</span
+          >
+        </p>
+        <p>
+          Ability One: {{ selectedHero.abilityOne }}
+          <span *ngIf="selectedHero.abilityOne == selectedHero.disabledAbility"
+            >(Disabled)</span
+          >
+        </p>
+        <p>
+          Ability Two: {{ selectedHero.abilityTwo }}
+          <span *ngIf="selectedHero.abilityTwo == selectedHero.disabledAbility"
+            >(Disabled)</span
+          >
+        </p>
+        <p>
+          Secondary Fire: {{ selectedHero.secondaryFire }}
+          <span
+            *ngIf="selectedHero.secondaryFire == selectedHero.disabledAbility"
+            >(Disabled)</span
+          >
+        </p>
       </div>
     </div>
   </div>

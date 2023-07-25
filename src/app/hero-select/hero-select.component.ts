@@ -11,6 +11,7 @@ export class HeroSelectComponent implements OnInit {
   heroForm: FormGroup;
   selectedHero: any = null;
   isRoleSelected = false;
+  excludeUltimate = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -36,10 +37,10 @@ export class HeroSelectComponent implements OnInit {
     if (formValue.damage) roles.push('Damage');
     if (formValue.support) roles.push('Support');
     const selectedRole = roles[Math.floor(Math.random() * roles.length)];
-    const excludeUltimate = formValue.ultimate;
+    this.excludeUltimate = formValue.ultimate;
 
     this.heroService
-      .getRandomHero(selectedRole, excludeUltimate)
+      .getRandomHero(selectedRole, this.excludeUltimate)
       .subscribe((data: any) => {
         this.selectedHero = data;
       });
