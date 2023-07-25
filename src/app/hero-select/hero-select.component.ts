@@ -10,25 +10,36 @@ import { HeroService } from '../hero.service';
 export class HeroSelectComponent implements OnInit {
   heroForm: FormGroup;
   selectedHero: any = null;
+  isRoleSelected = false;
 
   constructor(
     private formBuilder: FormBuilder,
     private heroService: HeroService
   ) {
     this.heroForm = this.formBuilder.group({
-      role: ['Tank', Validators.required],
+      tank: [false],
+      damage: [false],
+      support: [false],
       ultimate: [false],
+    });
+    this.heroForm.valueChanges.subscribe((value) => {
+      this.isRoleSelected = value.tank || value.damage || value.support;
     });
   }
 
   ngOnInit(): void {}
 
   onSubmit(): void {
-    const role = this.heroForm.value.role;
-    const excludeUltimate = this.heroForm.value.ultimate;
+    const roles = [];
+    const formValue = this.heroForm.value;
+    if (formValue.tank) roles.push('Tank');
+    if (formValue.damage) roles.push('Damage');
+    if (formValue.support) roles.push('Support');
+    const selectedRole = roles[Math.floor(Math.random() * roles.length)];
+    const excludeUltimate = formValue.ultimate;
 
     this.heroService
-      .getRandomHero(role, excludeUltimate)
+      .getRandomHero(selectedRole, excludeUltimate)
       .subscribe((data: any) => {
         this.selectedHero = data;
       });
