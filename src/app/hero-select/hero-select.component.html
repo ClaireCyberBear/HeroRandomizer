@@ -62,6 +62,12 @@
 
     <div class="hero">
       <div *ngIf="selectedHero">
+        <img
+          [src]="'assets/' + selectedHero.id + '.jpg'"
+          height="100"
+          width="100"
+          alt="{{ selectedHero.name }}"
+        />
         <h2>Generated Hero: {{ selectedHero.name }}</h2>
         <p>Role: {{ selectedHero.role }}</p>
         <p>Ultimate: {{ selectedHero.ultimate }}</p>
