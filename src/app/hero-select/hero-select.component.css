@@ -2,9 +2,9 @@
   background-color: rgb(53, 53, 82);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin: 0;
-  height: 95vh;
+  height: auto;
+  min-height: 100vh;
 }
 
 .banner {
@@ -26,25 +26,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: auto;
   margin: 40px;
 }
 
-.generator {
-  background-color: rgb(100, 100, 100);
-  margin-left: 5%;
-  height: 400px;
-  min-width: 400px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .introduction {
-  height: 50px;
-  margin-left: 300px;
-  margin-right: 300px;
+  height: auto;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 P {
@@ -62,12 +51,14 @@ h2 {
   font-weight: 900;
 }
 
-.hero {
+.hero,
+.generator {
   background-color: rgb(100, 100, 100);
   color: white;
   margin-right: 5%;
-  height: 400px;
-  min-width: 400px;
+  margin-left: 5%;
+  height: 350px;
+  width: 40%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -119,4 +110,53 @@ form {
 
 .form-control {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .generator,
+  .hero {
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+  .introduction {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 10%;
+  }
+
+  .banner-text {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .role-label {
+    font-size: 24px;
+  }
+
+  .form-group,
+  .form-check {
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .btn-primary {
+    height: 60px;
+  }
+  .container {
+    min-height: 100vh;
+  }
 }
